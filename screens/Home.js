@@ -44,10 +44,7 @@ const Home = () => {
 
   return(
     <Container>
-      <FeedContainer>
-        <Feed data={postData} renderItem={renderPost} keyExtractor={item => item.id.toString()}/>
-      </FeedContainer>
-
+      <Feed data={postData} renderItem={renderPost} keyExtractor={item => item.id.toString()}/>
       <StatusBar barStyle="dark-content"/>
     </Container>
   );
@@ -56,7 +53,6 @@ const Home = () => {
 const Container = styled.View`
   flex: 1;
   background-color: #cbe8ba;
-  padding-top: 64px;
 `
 
 const FeedContainer = styled.View``

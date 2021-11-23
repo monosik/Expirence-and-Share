@@ -6,10 +6,10 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeStack from "./HomeStack";
-import Search from "../screens/Search";
+import SearchStack from "./SearchStack";
 import NotiPage from "../screens/NotiPage";
 import Profile from "../screens/Profile";
-import CreatePost from "../screens/CreatePost";
+import CreatePostStack from "./CreatePostStack";
 
 import cat from '../assets/Image/cat.png';
 
@@ -68,7 +68,7 @@ const NavbarTab = ({navigation}) => {
                         iconName = focused 
                         ? 'person' 
                         : 'person-outline';
-                    } else if (route.name === 'Create') {
+                    } else if (route.name === 'CreatePost') {
                         iconName = focused 
                         ? 'add-circle' 
                         : 'add-circle-outline';
@@ -84,8 +84,8 @@ const NavbarTab = ({navigation}) => {
             
             >
                 <Tab.Screen name="Feed" component={HomeStack} />
-                <Tab.Screen name="Search" component={Search} />
-                <Tab.Screen name="Create" component={CreatePost}/>
+                <Tab.Screen name="Search" component={SearchStack} />
+                <Tab.Screen name="CreatePost" component={CreatePostStack} />
                 <Tab.Screen name="Notification" component={NotiPage} />
                 <Tab.Screen name="Profile" component={Profile} />
             </Tab.Navigator>

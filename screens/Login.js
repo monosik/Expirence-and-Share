@@ -90,9 +90,7 @@ const Login = () => {
                 <TextLinkContent>Sign Up</TextLinkContent>
               </TextLink>
             </ExtraView>
-            <ExtraView>
-              
-            </ExtraView>
+            
           </StyledFormArea>)}
 
         </Formik>

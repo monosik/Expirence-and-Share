@@ -86,7 +86,7 @@ const CustomDrawerComponent = ({props, navigation}) => (
 
             <TouchableOpacity
                 style={{
-                    marginBottom: 20,
+                    marginTop: 20,
                     flexDirection: 'row', 
                     alignItems: 'center',
                 }}
