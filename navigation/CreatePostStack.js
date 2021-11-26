@@ -34,15 +34,13 @@ const CreatePostStack = ({navigation}) => {
                     ),
                     headerRight: () => (
                         <View style={{ flexDirection: 'row', alignItems: 'center', right: 10}}>
-                            <Image source={cat} style={{}}></Image>
+                            <Image source={cat} style={{borderWidth: 1, borderColor: 'black', borderRadius: 15}}></Image>
                             <Text style={{fontWeight: 'bold'}}> Farlalook</Text>
                         </View>
                     ),
                 }}/>
         </Stack.Navigator>
-        
-
-    )
+    );
 }
 
 export default CreatePostStack;

@@ -3,16 +3,11 @@ import styled from "styled-components";
 import { OwnPost } from "../components/postData";
 import { TestPost } from "../components/postDataTwo";
 
-import { 
-  View, 
-  Text, 
-  TouchableOpacity, 
-  Image 
-} from "react-native";
-import { Octicons, Ionicons,Entypo } from "@expo/vector-icons"
-import cat from '../assets/Image/CatProfile.png';
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import { Octicons, Ionicons, Entypo } from "@expo/vector-icons";
+import cat from "../assets/Image/CatProfile.png";
 
-const Profile = ({navigation}) => {
+const Profile = ({ navigation }) => {
   const renderPost = ({ item }) => (
     <PostContainer>
       <PostHeaderContainer>
@@ -137,25 +132,20 @@ const Profile = ({navigation}) => {
 
         <StatsContainer>
           <StatContainer>
-            <StateText>2</StateText>
+            <StateText>1</StateText>
             <StateText>Posts</StateText>
           </StatContainer>
         </StatsContainer>
       </BackgroundContainer>
 
       <Feed
-        data={TestPost}
-        renderItem={renderPostTwo}
-        keyExtractor={(item) => item.id.toString()}
-      />
-      <FeedContainer
         data={OwnPost}
         renderItem={renderPost}
         keyExtractor={(item) => item.id.toString()}
       />
     </Container>
   );
-}
+};
 
 const Container = styled.View`
   margin: 30px 0px 0px 0px;
@@ -163,17 +153,11 @@ const Container = styled.View`
 `;
 
 const Feed = styled.FlatList`
-  paddingBottom: 20%;
-`;
-
-const FeedContainer = styled.FlatList`
-  paddingTop: 0%;
-  marginTop: 0%;
 `;
 
 const BackgroundContainer = styled.View`
   padding: 10px 0 15% 0;
-  backgroundColor: #cbe8ba;
+  background-color: #cbe8ba;
 `;
 
 const BackHome = styled.View`
@@ -194,7 +178,7 @@ const ProfilePhoto = styled.Image`
   width: 128px;
   height: 128px;
   border-radius: 64px;
-`
+`;
 
 const StatsContainer = styled.View`
   justify-content: center;
@@ -210,20 +194,18 @@ const StatContainer = styled.View`
 
 const NameProfileText = styled.Text`
   fontSize: 20px;
-  fontWeight: bold; 
+  fontWeight: bold;
   margin: 16px 0 0px 0;
   justify-content: center;
   align-items: center;
 `;
 
 const StateText = styled.Text`
-  fontWeight: bold; 
+  fontWeight: bold;
   color: #c2c4cd;
   align-items: center;
   padding: 0% 50px 0%;
 `;
-
-
 
 const PostContainer = styled.View`
   margin: 16px 16px 0 16px;
@@ -251,12 +233,12 @@ const PostInfoContainer = styled.View`
 `;
 
 const Options = styled.View`
-  margin-right: 20px
+  margin-right: 20px;
 `;
 
 const Post = styled.View`
   margin-left: 20px;
-  margin-right: 10px
+  margin-right: 10px;
 `;
 
 const PostPhoto = styled.Image`

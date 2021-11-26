@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Image, Text, TextInput, TouchableOpacity} from "react-native";
 import Constants from "expo-constants";
 
 const StatusBarHeight = Constants.statusBarHeight;
@@ -115,7 +115,20 @@ export const PostTextInput = styled.TextInput`
   color: ${tertiary};
 `;
 
-// export const TextArea = styled.textarea`
+// export const PostTextInputSecond = styled.TextInput`
+//   background-color: ${secondary};
+//   padding: 15px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   border-radius: 5px;
+//   font-size: 16px;
+//   height: 60px;
+//   margin-vertical: 3px;
+//   margin-bottom: 10px;
+//   color: ${tertiary};
+// `;
+
+// export const PostTextArea = styled.textarea`
 //   background-color: ${secondary};
 //   padding: 15px;
 //   padding-left: 15px;

@@ -6,13 +6,13 @@ import { Image, View, Text, SafeAreaView, StyleSheet} from "react-native";
 import CustomHeader from "../components/CustomHeader";
 import { Octicons, Ionicons,Entypo } from "@expo/vector-icons"
 import cat from '../assets/Image/cat.png';
-import postData from "../components/postData";
+import {postData} from "../components/postData";
 
 const Home = () => {
   const renderPost =({item}) => (
     <PostContainer>
       <PostHeaderContainer>
-          <PostProfilePhoto source={{uri: item.user.profilePhotoUrl}} />
+          <PostProfilePhoto source={{uri: item.user.profilePhotoUrl}} style={{borderWidth: 1.5, borderColor:'black'}}/>
         
           <PostInfoContainer>
             <Text medium>{item.user.username}</Text>
@@ -53,6 +53,7 @@ const Home = () => {
 const Container = styled.View`
   flex: 1;
   background-color: #cbe8ba;
+  padding-bottom: 50px;
 `
 
 const FeedContainer = styled.View``
@@ -63,7 +64,7 @@ const PostContainer = styled.View`
   margin: 16px 16px 0 16px;
   background-color: #ffffff;
   border-radius: 6px;
-  padding: 5px;
+  padding: 10px;
 `
 
 const PostHeaderContainer = styled.View`
@@ -118,7 +119,6 @@ const PostComments = styled.View`
   margin-top: 2%;
   margin-bottom: 5px;
 `
-
 
 const StatusBar = styled.View`` 
 

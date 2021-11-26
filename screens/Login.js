@@ -31,10 +31,14 @@ import{
 
 import { View } from "react-native";
 
+import HomeStack from "../navigation/HomeStack";
+import DrawerNavbar from "../navigation/DrawerNavbar";
+import NavbarTab from "../navigation/NavbarTab";
+
 //colors
 const {brand, darkLight} = Colors;
 
-const Login = () => {
+const Login = ({navigation}) => {
   //Show hide password
   const [hidePassword, setHidePassword] = useState(true);
 
@@ -79,14 +83,14 @@ const Login = () => {
             />
 
             <MsgBox>...</MsgBox>
-            <StyledButton onPress ={handleSubmit}>
+            <StyledButton onPress ={() => navigation.navigate('NavbarTab')}>
               <ButtonText>
                 Sign In
               </ButtonText>
             </StyledButton>
             <ExtraView>
               <ExtraText>Don't Have an account? </ExtraText>
-              <TextLink>
+              <TextLink onPress ={() => navigation.navigate('SignUpScreen')}>
                 <TextLinkContent>Sign Up</TextLinkContent>
               </TextLink>
             </ExtraView>
